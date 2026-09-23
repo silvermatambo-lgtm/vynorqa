@@ -28,8 +28,11 @@ export default function Home(){return <div className="min-h-screen bg-[#020817] 
       <div className="flex flex-wrap gap-4 mt-8"><a href="#technology" className="neo-btn">Explore Our Technology <ArrowRight size={17}/></a><a href="#products" className="outline-btn">Our Products <ArrowRight size={17}/></a></div>
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-10 text-sm text-slate-200"><div>🧠 AI Powered Solutions</div><div>🌍 Built for Africa & Beyond</div><div>👥 People Focused</div><div>📈 A Smarter Tomorrow</div></div>
     </div>
-    <div className="relative hidden lg:block h-[560px]">
-      <img src="/vynorqa-hero.png" className="absolute inset-0 w-full h-full object-contain object-center" alt="Vynorqa AI ecosystem"/>
+    <div className="relative hidden lg:block h-[560px] overflow-hidden">
+      <div className="absolute inset-0 rounded-[32px] overflow-hidden">
+        <img src="/vynorqa-hero.png" className="absolute top-[-6%] left-[-43%] w-[146%] max-w-none h-auto" alt="Vynorqa AI visual"/>
+      </div>
+      <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-[#020817]/20 pointer-events-none"/>
       {products.map((p,i)=>{const pos=[[3,11],[66,8],[1,38],[71,37],[6,67],[67,66]][i];return <a href={'#product-'+p.id} key={p.id} className="hero-product bg-[#061127]/65 overflow-hidden group" style={{left:pos[0]+'%',top:pos[1]+'%',animationDelay:(i*.23)+'s',minWidth:'150px'}}>
         <div className="relative flex items-center gap-2"><p.Icon size={24}/><span>{p.name}</span></div>
       </a>})}
