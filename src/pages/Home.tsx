@@ -17,9 +17,8 @@ function Typewriter({text,speed=34}:{text:string,speed?:number}){const[out,setOu
 export default function Home(){return <div className="min-h-screen bg-[#020817] text-white overflow-hidden">
 <header className="sticky top-0 z-50 bg-[#020817]/90 backdrop-blur-xl border-b border-cyan-400/10"><div className="max-w-7xl mx-auto px-5 h-20 flex items-center justify-between"><a href="#home" className="flex items-center gap-3"><img src="/vynorqa-logo.jpeg" className="h-14 w-14 rounded-xl object-cover"/><div><b className="text-2xl">Vynorqa</b><div className="text-[9px] tracking-[.22em] text-slate-400 uppercase">Innovation today • A smarter tomorrow</div></div></a><nav className="hidden lg:flex gap-7 text-sm text-slate-300"><a href="#home">Home</a><a href="#about">About</a><a href="#technology">AI Technology</a><a href="#products">Products</a><a href="#innovation">Innovation</a><a href="#partnerships">Partnerships</a><a href="#contact">Contact</a></nav><a href="#contact" className="neo-btn">Get in Touch</a></div></header>
 
-<section id="home" className="relative min-h-[760px] flex items-center border-b border-cyan-400/10 overflow-hidden">
-  <img src="/vynorqa-hero.png" className="absolute inset-0 w-full h-full object-cover object-center"/>
-  <div className="absolute inset-0 bg-gradient-to-r from-[#020817]/98 via-[#020817]/76 to-[#020817]/10"/>
+<section id="home" className="relative min-h-[760px] flex items-center border-b border-cyan-400/10 overflow-hidden bg-[#020817]">
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_72%_35%,rgba(26,213,255,.14),transparent_30%),radial-gradient(circle_at_82%_58%,rgba(159,37,255,.12),transparent_26%)]"/>
   <div className="relative max-w-7xl mx-auto px-5 py-20 w-full grid lg:grid-cols-[.92fr_1.08fr] gap-10 items-center">
     <div className="max-w-xl">
       <p className="eyebrow">Innovation today • A smarter tomorrow</p>
@@ -30,8 +29,8 @@ export default function Home(){return <div className="min-h-screen bg-[#020817] 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-10 text-sm text-slate-200"><div>🧠 AI Powered Solutions</div><div>🌍 Built for Africa & Beyond</div><div>👥 People Focused</div><div>📈 A Smarter Tomorrow</div></div>
     </div>
     <div className="relative hidden lg:block h-[560px]">
-      {products.map((p,i)=>{const pos=[[3,11],[66,8],[1,38],[71,37],[6,67],[67,66]][i];return <a href={'#product-'+p.id} key={p.id} className="hero-product bg-[#061127]/75 overflow-hidden group" style={{left:pos[0]+'%',top:pos[1]+'%',animationDelay:(i*.23)+'s',minWidth:'150px'}}>
-        <div className="absolute inset-0 opacity-60" style={{backgroundImage:'url(/vynorqa-hero.png)',backgroundSize:'720px auto',backgroundPosition:p.pos}}/>
+      <img src="/vynorqa-hero.png" className="absolute inset-0 w-full h-full object-contain object-center" alt="Vynorqa AI ecosystem"/>
+      {products.map((p,i)=>{const pos=[[3,11],[66,8],[1,38],[71,37],[6,67],[67,66]][i];return <a href={'#product-'+p.id} key={p.id} className="hero-product bg-[#061127]/65 overflow-hidden group" style={{left:pos[0]+'%',top:pos[1]+'%',animationDelay:(i*.23)+'s',minWidth:'150px'}}>
         <div className="relative flex items-center gap-2"><p.Icon size={24}/><span>{p.name}</span></div>
       </a>})}
     </div>
