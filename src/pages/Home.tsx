@@ -3,12 +3,12 @@ import {Brain,Network,Workflow,TrendingUp,MessageCircle,GraduationCap,Baby,Users
 import FloatingWhatsApp from '../components/FloatingWhatsApp';
 
 const products=[
- {id:'talker',name:'Talker',desc:'Communication, messaging, video & conference calls',Icon:MessageCircle},
- {id:'scholar',name:'Scholar Solver AI',desc:'AI assistance for university students',Icon:GraduationCap},
- {id:'edukids',name:'EduKids',desc:'Interactive education for children',Icon:Baby},
- {id:'smiley',name:'Smiley',desc:'Social networking and digital communities',Icon:Users},
- {id:'strata',name:'Strata',desc:'Digital data vending and connectivity services',Icon:Wifi},
- {id:'farmhub',name:'Farm Hub AI',desc:'AI-powered tools for farmers',Icon:Leaf}
+ {id:'talker',name:'Talker',desc:'Communication, messaging, video & conference calls',Icon:MessageCircle,image:'/vynorqa-hero.png',pos:'8% 68%'},
+ {id:'scholar',name:'Scholar Solver AI',desc:'AI assistance for university students',Icon:GraduationCap,image:'/vynorqa-hero.png',pos:'27% 68%'},
+ {id:'edukids',name:'EduKids',desc:'Interactive education for children',Icon:Baby,image:'/vynorqa-hero.png',pos:'46% 68%'},
+ {id:'smiley',name:'Smiley',desc:'Social networking and digital communities',Icon:Users,image:'/vynorqa-hero.png',pos:'65% 68%'},
+ {id:'strata',name:'Strata',desc:'Digital data vending and connectivity services',Icon:Wifi,image:'/vynorqa-hero.png',pos:'81% 68%'},
+ {id:'farmhub',name:'Farm Hub AI',desc:'AI-powered tools for farmers',Icon:Leaf,image:'/vynorqa-hero.png',pos:'95% 68%'}
 ];
 const pillars=[['AI First','Intelligence built into every product.',Brain],['Connected Ecosystem','Products designed to work together.',Network],['Automation','Reduce repetitive work through intelligent systems.',Workflow],['Scalable Technology','Built to grow from local to international markets.',TrendingUp]];
 
@@ -17,44 +17,45 @@ function Typewriter({text,speed=34}:{text:string,speed?:number}){const[out,setOu
 export default function Home(){return <div className="min-h-screen bg-[#020817] text-white overflow-hidden">
 <header className="sticky top-0 z-50 bg-[#020817]/90 backdrop-blur-xl border-b border-cyan-400/10"><div className="max-w-7xl mx-auto px-5 h-20 flex items-center justify-between"><a href="#home" className="flex items-center gap-3"><img src="/vynorqa-logo.jpeg" className="h-14 w-14 rounded-xl object-cover"/><div><b className="text-2xl">Vynorqa</b><div className="text-[9px] tracking-[.22em] text-slate-400 uppercase">Innovation today • A smarter tomorrow</div></div></a><nav className="hidden lg:flex gap-7 text-sm text-slate-300"><a href="#home">Home</a><a href="#about">About</a><a href="#technology">AI Technology</a><a href="#products">Products</a><a href="#innovation">Innovation</a><a href="#partnerships">Partnerships</a><a href="#contact">Contact</a></nav><a href="#contact" className="neo-btn">Get in Touch</a></div></header>
 
-<section id="home" className="relative min-h-[760px] flex items-center border-b border-cyan-400/10">
-<div className="absolute inset-0 overflow-hidden">
-  <div className="absolute -top-24 -right-20 h-[560px] w-[560px] rounded-full bg-cyan-500/20 blur-3xl"/>
-  <div className="absolute top-32 right-32 h-[420px] w-[420px] rounded-full bg-blue-600/20 blur-3xl"/>
-  <div className="absolute bottom-10 right-0 h-[380px] w-[380px] rounded-full bg-fuchsia-600/20 blur-3xl"/>
-  <div className="absolute inset-0 opacity-40" style={{backgroundImage:'radial-gradient(circle at 70% 38%, rgba(35,214,255,.22) 0, rgba(35,214,255,0) 32%), linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg,rgba(255,255,255,.035) 1px, transparent 1px)',backgroundSize:'auto, 42px 42px, 42px 42px'}}/>
-</div>
-<div className="absolute inset-0 bg-gradient-to-r from-[#020817] via-[#020817]/78 to-[#020817]/18"/>
-<div className="relative max-w-7xl mx-auto px-5 py-24 w-full grid lg:grid-cols-[1.05fr_.95fr] gap-10 items-center">
-<div className="max-w-2xl"><p className="eyebrow">Innovation today • A smarter tomorrow</p><h1 className="text-6xl md:text-8xl font-black tracking-tight">Vynorqa</h1>
-<h2 className="text-3xl md:text-5xl font-bold mt-4 leading-tight min-h-[116px]"><Typewriter text="Building intelligent technology for a connected future."/></h2>
-<p className="text-lg text-slate-300 mt-6 max-w-xl min-h-[92px]"><Typewriter text="AI-powered digital products solving real-world challenges in communication, education, social platforms, agriculture and digital services across Africa and beyond." speed={18}/></p>
-<div className="flex flex-wrap gap-4 mt-8"><a href="#technology" className="neo-btn">Explore Our Technology <ArrowRight size={17}/></a><a href="#products" className="outline-btn">Our Products <ArrowRight size={17}/></a></div>
-<div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-10 text-sm text-slate-300"><div>🧠 AI Powered Solutions</div><div>🌍 Built for Africa & Beyond</div><div>👥 People Focused</div><div>📈 A Smarter Tomorrow</div></div></div>
-<div className="relative hidden lg:block h-[520px]">
-  <div className="absolute inset-[6%] rounded-full border border-cyan-300/20 shadow-[0_0_100px_rgba(26,213,255,.18)]"/>
-  <div className="absolute inset-[14%] rounded-full border border-blue-400/20"/>
-  <div className="absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-500/15 blur-sm shadow-[0_0_80px_rgba(22,117,255,.24)]"/>
-  <div className="absolute left-1/2 top-1/2 h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-cyan-300/10" style={{backgroundImage:'radial-gradient(circle at center, rgba(17,88,255,.18), rgba(2,8,23,.05) 55%), repeating-radial-gradient(circle at center, rgba(52,211,255,.08) 0 1px, transparent 1px 18px)'}}/>
-  {products.map((p,i)=>{const pos=[[2,18],[67,4],[75,36],[68,68],[4,68],[-4,43]][i];return <a href={'#product-'+p.id} key={p.id} className="hero-product" style={{left:pos[0]+'%',top:pos[1]+'%',animationDelay:(i*.23)+'s'}}><p.Icon size={24}/><span>{p.name}</span></a>})}
-  <div className="absolute left-1/2 top-[44%] -translate-x-1/2 -translate-y-1/2 glass-card !p-8 text-center shadow-[0_0_55px_rgba(92,99,255,.35)]">
-    <img src="/vynorqa-logo.jpeg" className="h-16 w-16 mx-auto rounded-2xl object-cover"/>
-    <b className="block mt-3 text-xl">Vynorqa AI</b>
-    <span className="text-xs text-slate-400">Connecting People<br/>Ideas and Opportunities</span>
+<section id="home" className="relative min-h-[760px] flex items-center border-b border-cyan-400/10 overflow-hidden">
+  <img src="/vynorqa-hero.png" className="absolute inset-0 w-full h-full object-cover object-center"/>
+  <div className="absolute inset-0 bg-gradient-to-r from-[#020817]/98 via-[#020817]/76 to-[#020817]/10"/>
+  <div className="relative max-w-7xl mx-auto px-5 py-20 w-full grid lg:grid-cols-[.92fr_1.08fr] gap-10 items-center">
+    <div className="max-w-xl">
+      <p className="eyebrow">Innovation today • A smarter tomorrow</p>
+      <h1 className="text-6xl md:text-8xl font-black tracking-tight">Vynorqa</h1>
+      <h2 className="text-3xl md:text-5xl font-bold mt-4 leading-tight min-h-[116px]"><Typewriter text="Building intelligent technology for a connected future."/></h2>
+      <p className="text-lg text-slate-200 mt-6 max-w-xl min-h-[92px]"><Typewriter text="AI-powered digital products solving real-world challenges in communication, education, social platforms, agriculture and digital services across Africa and beyond." speed={18}/></p>
+      <div className="flex flex-wrap gap-4 mt-8"><a href="#technology" className="neo-btn">Explore Our Technology <ArrowRight size={17}/></a><a href="#products" className="outline-btn">Our Products <ArrowRight size={17}/></a></div>
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-10 text-sm text-slate-200"><div>🧠 AI Powered Solutions</div><div>🌍 Built for Africa & Beyond</div><div>👥 People Focused</div><div>📈 A Smarter Tomorrow</div></div>
+    </div>
+    <div className="relative hidden lg:block h-[560px]">
+      {products.map((p,i)=>{const pos=[[3,11],[66,8],[1,38],[71,37],[6,67],[67,66]][i];return <a href={'#product-'+p.id} key={p.id} className="hero-product bg-[#061127]/75 overflow-hidden group" style={{left:pos[0]+'%',top:pos[1]+'%',animationDelay:(i*.23)+'s',minWidth:'150px'}}>
+        <div className="absolute inset-0 opacity-60" style={{backgroundImage:'url(/vynorqa-hero.png)',backgroundSize:'720px auto',backgroundPosition:p.pos}}/>
+        <div className="relative flex items-center gap-2"><p.Icon size={24}/><span>{p.name}</span></div>
+      </a>})}
+    </div>
   </div>
-  <div className="absolute right-[-2%] top-[20%] text-right text-white/90 italic text-2xl leading-tight rotate-[-4deg]">
-    Technology<br/>for a brighter<br/>Africa
-  </div>
-  <div className="absolute bottom-3 left-1/2 -translate-x-1/2 w-[72%] h-28 rounded-t-[50%] bg-gradient-to-t from-black/35 to-transparent"/>
-</div></div></section>
+</section>
 
-<section id="products" className="py-12 md:py-14 bg-[#040b1c] border-b border-cyan-400/10"><div className="max-w-7xl mx-auto px-5"><div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6"><div><p className="eyebrow">Our products</p><h2 className="text-4xl md:text-5xl font-black mt-2">An Ecosystem for a <span className="gradient-text">Smarter Tomorrow</span></h2></div><div className="lg:text-right"><p className="text-slate-300 max-w-xl">Six powerful products. One intelligent ecosystem.<br/>Transforming lives through technology.</p><a href="#contact" className="outline-btn mt-4">Explore All Products <ArrowRight size={16}/></a></div></div><div className="grid sm:grid-cols-2 lg:grid-cols-6 gap-3 mt-8">{products.map((p,i)=><article id={'product-'+p.id} className="glass-card product-card scroll-mt-28 !p-4 min-h-[210px] flex flex-col" key={p.name}><div className="icon-orb animate-float" style={{animationDelay:(i*.18)+'s'}}><p.Icon/></div><h3 className="text-lg font-bold mt-4">{p.name}</h3><p className="text-slate-400 mt-2 text-sm">{p.desc}</p><a href="#contact" className="inline-flex items-center gap-2 mt-auto pt-5 text-cyan-300 font-semibold text-sm">Explore <ChevronRight size={15}/></a></article>)}</div></div></section>
+<section id="products" className="py-12 md:py-14 bg-[#040b1c] border-b border-cyan-400/10"><div className="max-w-7xl mx-auto px-5"><div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6"><div><p className="eyebrow">Our products</p><h2 className="text-4xl md:text-5xl font-black mt-2">An Ecosystem for a <span className="gradient-text">Smarter Tomorrow</span></h2></div><div className="lg:text-right"><p className="text-slate-300 max-w-xl">Six powerful products. One intelligent ecosystem.<br/>Transforming lives through technology.</p><a href="#contact" className="outline-btn mt-4">Explore All Products <ArrowRight size={16}/></a></div></div><div className="grid sm:grid-cols-2 lg:grid-cols-6 gap-3 mt-8">{products.map((p,i)=><article id={'product-'+p.id} className="glass-card product-card scroll-mt-28 !p-0 min-h-[250px] flex flex-col overflow-hidden" key={p.name}>
+  <div className="h-36 relative overflow-hidden border-b border-cyan-300/10">
+    <div className="absolute inset-0 scale-[2.05]" style={{backgroundImage:'url(/vynorqa-hero.png)',backgroundSize:'760px auto',backgroundPosition:p.pos}}/>
+    <div className="absolute inset-0 bg-gradient-to-t from-[#061127] via-transparent to-transparent"/>
+    <div className="absolute right-3 top-3 icon-orb animate-float" style={{animationDelay:(i*.18)+'s'}}><p.Icon/></div>
+  </div>
+  <div className="p-4 flex flex-col flex-1">
+    <h3 className="text-lg font-bold">{p.name}</h3>
+    <p className="text-slate-400 mt-2 text-sm">{p.desc}</p>
+    <a href="#contact" className="inline-flex items-center gap-2 mt-auto pt-5 text-cyan-300 font-semibold text-sm">Explore <ChevronRight size={15}/></a>
+  </div>
+</article>)}</div></div></section>
 
 <section id="about" className="section"><div className="max-w-7xl mx-auto px-5 grid lg:grid-cols-2 gap-12 items-center"><div><p className="eyebrow">About Vynorqa</p><h2 className="heading">Technology built around <span className="gradient-text">real human needs.</span></h2></div><p className="copy">Vynorqa develops AI-powered digital products designed to solve problems in communication, education, social platforms, agriculture and digital services. Our ecosystem connects intelligent tools with practical everyday experiences for people, businesses and communities.</p></div></section>
 
 <section id="technology" className="section bg-[#050d22]"><div className="max-w-7xl mx-auto px-5"><p className="eyebrow">Vynorqa AI Core</p><h2 className="heading">One intelligence layer. <span className="gradient-text">Six powerful capabilities.</span></h2><div className="grid sm:grid-cols-2 lg:grid-cols-6 gap-4 mt-10">{[['Intelligence',Brain],['Automation',Workflow],['Personalization',Users],['Analytics',BarChart3],['Security',ShieldCheck],['Business Operations',TrendingUp]].map(([t,I]:any,i)=><a href="#innovation" className="glass-card text-center product-card" key={t}><I className="mx-auto text-cyan-300 animate-float" style={{animationDelay:(i*.15)+'s'}}/><b className="block mt-4">{t}</b></a>)}</div></div></section>
 
-<section className="py-12 bg-[#061127] border-b border-blue-500/10"><div className="max-w-7xl mx-auto px-5 grid lg:grid-cols-[1.05fr_3fr] gap-8 items-center"><div><p className="eyebrow">Why Vynorqa</p><h2 className="text-4xl font-black mt-3">Intelligent Solutions<br/>for <span className="gradient-text">Real Impact</span></h2></div><div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-0 divide-x divide-white/10">{pillars.map(([t,d,I]:any,i)=><div className="glass-card" key={t}><I className="text-fuchsia-400 animate-float" style={{animationDelay:(i*.18)+'s'}}/><h3 className="text-xl font-bold mt-4">{t}</h3><p className="text-slate-400 mt-2">{d}</p></div>)}</div></div></section>
+<section className="py-12 bg-[#061127] border-b border-blue-500/10 relative overflow-hidden"><div className="absolute right-0 inset-y-0 w-[34%] opacity-35 bg-cover bg-center" style={{backgroundImage:'url(/vynorqa-hero.png)',backgroundPosition:'88% 94%'}}/><div className="relative max-w-7xl mx-auto px-5 grid lg:grid-cols-[1.05fr_3fr] gap-8 items-center"><div><p className="eyebrow">Why Vynorqa</p><h2 className="text-4xl font-black mt-3">Intelligent Solutions<br/>for <span className="gradient-text">Real Impact</span></h2></div><div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-0 divide-x divide-white/10">{pillars.map(([t,d,I]:any,i)=><div className="glass-card" key={t}><I className="text-fuchsia-400 animate-float" style={{animationDelay:(i*.18)+'s'}}/><h3 className="text-xl font-bold mt-4">{t}</h3><p className="text-slate-400 mt-2">{d}</p></div>)}</div></div></section>
 
 <section className="section bg-[#050d22]"><div className="max-w-7xl mx-auto px-5 grid lg:grid-cols-2 gap-12 items-center"><div className="rounded-3xl min-h-[390px] bg-gradient-to-br from-cyan-500/20 via-blue-700/10 to-fuchsia-500/20 border border-cyan-300/20 grid place-items-center p-10"><div className="text-center"><Brain size={76} className="mx-auto text-cyan-300"/><p className="eyebrow mt-6">Founder / Vision</p><p className="text-2xl md:text-3xl font-semibold leading-relaxed">“We are building technology that doesn't simply respond to people — it understands what they need and helps them get it done.”</p></div></div><div><p className="eyebrow">Our Vision</p><h2 className="heading">African innovation with <span className="gradient-text">global ambition.</span></h2><p className="copy">Vynorqa is creating a connected technology ecosystem that can scale with the people and markets it serves. The founder portrait can be added here once supplied.</p></div></div></section>
 
