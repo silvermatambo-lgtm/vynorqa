@@ -18,7 +18,12 @@ export default function Home(){return <div className="min-h-screen bg-[#020817] 
 <header className="sticky top-0 z-50 bg-[#020817]/90 backdrop-blur-xl border-b border-cyan-400/10"><div className="max-w-7xl mx-auto px-5 h-20 flex items-center justify-between"><a href="#home" className="flex items-center gap-3"><img src="/vynorqa-logo.jpeg" className="h-14 w-14 rounded-xl object-cover"/><div><b className="text-2xl">Vynorqa</b><div className="text-[9px] tracking-[.22em] text-slate-400 uppercase">Innovation today • A smarter tomorrow</div></div></a><nav className="hidden lg:flex gap-7 text-sm text-slate-300"><a href="#home">Home</a><a href="#about">About</a><a href="#technology">AI Technology</a><a href="#products">Products</a><a href="#innovation">Innovation</a><a href="#partnerships">Partnerships</a><a href="#contact">Contact</a></nav><a href="#contact" className="neo-btn">Get in Touch</a></div></header>
 
 <section id="home" className="relative min-h-[760px] flex items-center border-b border-cyan-400/10">
-<img src="/vynorqa-hero.png" className="absolute inset-0 w-full h-full object-cover opacity-55"/>
+<div className="absolute inset-0 overflow-hidden">
+  <div className="absolute -top-24 -right-20 h-[560px] w-[560px] rounded-full bg-cyan-500/20 blur-3xl"/>
+  <div className="absolute top-32 right-32 h-[420px] w-[420px] rounded-full bg-blue-600/20 blur-3xl"/>
+  <div className="absolute bottom-10 right-0 h-[380px] w-[380px] rounded-full bg-fuchsia-600/20 blur-3xl"/>
+  <div className="absolute inset-0 opacity-40" style={{backgroundImage:'radial-gradient(circle at 70% 38%, rgba(35,214,255,.22) 0, rgba(35,214,255,0) 32%), linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg,rgba(255,255,255,.035) 1px, transparent 1px)',backgroundSize:'auto, 42px 42px, 42px 42px'}}/>
+</div>
 <div className="absolute inset-0 bg-gradient-to-r from-[#020817] via-[#020817]/78 to-[#020817]/18"/>
 <div className="relative max-w-7xl mx-auto px-5 py-24 w-full grid lg:grid-cols-[1.05fr_.95fr] gap-10 items-center">
 <div className="max-w-2xl"><p className="eyebrow">Innovation today • A smarter tomorrow</p><h1 className="text-6xl md:text-8xl font-black tracking-tight">Vynorqa</h1>
@@ -31,6 +36,14 @@ export default function Home(){return <div className="min-h-screen bg-[#020817] 
 {products.map((p,i)=>{const pos=[[8,22],[65,8],[76,40],[66,70],[8,67],[-1,45]][i];return <a href={'#product-'+p.id} key={p.id} className="hero-product" style={{left:pos[0]+'%',top:pos[1]+'%',animationDelay:(i*.23)+'s'}}><p.Icon size={24}/><span>{p.name}</span></a>})}
 <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 glass-card !p-8 text-center shadow-[0_0_55px_rgba(92,99,255,.35)]"><Brain className="mx-auto text-cyan-300" size={46}/><b className="block mt-3 text-xl">Vynorqa AI Core</b><span className="text-xs text-slate-400">Connecting people, ideas & opportunities</span></div>
 </div></div></section>
+
+<section className="py-12 md:py-16 bg-[#030a1b] border-b border-cyan-400/10">
+  <div className="max-w-7xl mx-auto px-5">
+    <div className="rounded-[28px] overflow-hidden border border-cyan-300/15 bg-[#061127] shadow-2xl">
+      <img src="/vynorqa-hero.png" alt="Vynorqa connected AI ecosystem visual" className="w-full h-auto block"/>
+    </div>
+  </div>
+</section>
 
 <section id="products" className="section bg-[#040b1c]"><div className="max-w-7xl mx-auto px-5"><div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6"><div><p className="eyebrow">Our products</p><h2 className="heading">An Ecosystem for a <span className="gradient-text">Smarter Tomorrow</span></h2></div><p className="text-slate-400 max-w-xl">Six powerful products. One intelligent ecosystem. Transforming lives through technology.</p></div><div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">{products.map((p,i)=><article id={'product-'+p.id} className="glass-card product-card scroll-mt-28" key={p.name}><div className="icon-orb animate-float" style={{animationDelay:(i*.18)+'s'}}><p.Icon/></div><h3 className="text-2xl font-bold mt-5">{p.name}</h3><p className="text-slate-400 mt-2">{p.desc}</p><a href="#contact" className="inline-flex items-center gap-2 mt-6 text-cyan-300 font-semibold">Enquire about {p.name}<ChevronRight size={16}/></a></article>)}</div></div></section>
 
